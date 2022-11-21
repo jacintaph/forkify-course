@@ -2,7 +2,7 @@
 
 import View from './view.js';
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fractional'; //../../../node_modules/fractional'
+import fracty from 'fracty'; //../../../node_modules/fractional'
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
@@ -124,7 +124,7 @@ class RecipeView extends View {
   }
 
   _generateMarkupIngredient(ing) {
-    let quantity = ing.quantity ? new Fraction(ing.quantity).toString() : '';
+    let quantity = ing.quantity ? fracty(ing.quantity).toString() : '';
     return `
             <li class="recipe__ingredient">
                 <svg class="recipe__icon">
