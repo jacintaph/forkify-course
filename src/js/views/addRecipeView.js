@@ -6,7 +6,7 @@ class AddRecipeView extends View {
   _message = 'Recipe was successfully uploaded!';
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
-
+  _form = document.querySelector('.upload');
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
   _btnClose = document.querySelector('.btn--close-modal');
 
@@ -37,7 +37,6 @@ class AddRecipeView extends View {
 
       // Convert array of entries into an Object
       const data = Object.fromEntries(dataArr);
-
       handler(data);
     });
   }

@@ -102,6 +102,7 @@ export const deleteBookmark = function (id) {
   if (id === state.recipe.id) state.recipe.bookmarked = false;
 
   persistBookmarks();
+  clearBookmarks();
 };
 
 const init = function () {
@@ -150,10 +151,3 @@ export const uploadRecipe = async function (newRecipe) {
   }
 };
 //https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza&key=<insert your key>
-
-export const deleteRecipe = async function (recipe) {
-  try {
-  } catch (err) {
-    throw err;
-  }
-};
